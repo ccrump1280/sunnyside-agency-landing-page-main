@@ -1,0 +1,47 @@
+/* Desktop/tablet Design (601px and up) */
+@media only screen and (min-width: 601px) {
+    p {
+        font-size: clamp(14px, 1.8vw, 18px);
+    }
+
+    .article-section {
+        text-align: left!important;
+        padding: 0!important;
+        margin: auto;
+    }
+    .article-content {
+        width: 80%;
+        margin: auto;
+    }
+    .contact-button {
+        color: black;
+        background-color: white;
+        border-radius: 30px;
+        padding: 0px 15px;
+    }
+    .desktop-flex {
+        display: flex;
+    }
+    .desktop-hide {
+        display: none;
+    }
+    .desktop-reverse-order {
+        flex-direction: row-reverse;
+    }
+    .gallery-text {
+        min-width: 300px;
+        bottom: 40%;
+        transform: translateX(-50%) translateY(100%);
+    }
+    .mobile-hide {
+        display: block;
+    }
+
+    #down-arrow-icon {
+        bottom: 35%;
+    }
+    #testimonial-section {
+        width: 85%;
+        margin: 10vw auto;
+    }
+}

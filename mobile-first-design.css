@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5 {
     font-family: 'Fraunces';
 }
 h1 {
-    font-size: 38px;
+    font-size: clamp(30px, 10vw, 38px);
     font-weight: 900;
 }
 h1, h4 {
@@ -26,7 +26,7 @@ h5 {
     font-weight: 700;
 }
 p {
-    font-size: 18px;
+    font-size: clamp(15px, 4.75vw, 18px);
 }
 
 /* Colors */
@@ -48,6 +48,9 @@ p {
 .dark-green-filter {
     filter: brightness(0) saturate(100%) invert(51%) sepia(10%) saturate(1828%) hue-rotate(118deg) brightness(94%) contrast(84%);
 }
+.white-filter-hover:hover {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(437%) hue-rotate(96deg) brightness(117%) contrast(100%);
+}
 .white-icon {
     color: white;
 }
@@ -66,6 +69,28 @@ p {
 .bold-600 {
     font-weight: 600;
 }
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.contact-button {
+    background-color: hsl(51, 100%, 49%);
+    color: black;
+    border-radius: 30px;
+}
+.contact-button:hover {
+    background-color: hsl(51, 100%, 49%) !important;
+    opacity: 70%;
+}
 .fa-bars {
     font-size: 22px;
 }
@@ -75,7 +100,7 @@ p {
     bottom: 10%;
     transform: translateX(-50%) translateY(100%);
 }
-.mobile-hide {
+.desktop {
     display: none;
 }
 .mb-16 {
@@ -83,6 +108,19 @@ p {
 }
 .mt-32 {
     margin-top: 32px;
+}
+.navigation-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 75%;
+    width: 30%;
+    margin: auto;
+    color: grey;
+}
+.footer-button:hover {
+    color: white !important;
 }
 .primary-button {
     position: relative;
@@ -103,6 +141,9 @@ p {
 .primary-button.soft-red::after {
     background-color: hsl(7, 99%, 70%);
 }
+.primary-button:hover::after {
+    opacity: 80%;
+}
 .primary-button-text {
     text-transform: uppercase;
     font-size: 16px;
@@ -121,4 +162,23 @@ p {
     left: 50%;
     transform: translateX(-50%);
     top: 25%;
+}
+#mobile-menu {
+    top: 85px;
+    background-color: white;
+    width: 90%;
+    height: 60%;
+    z-index: 1;
+    display: none;
+}
+#mobile-menu::before {
+    border-color: transparent white transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 20px;
+    top: -20px;
+    content: " ";
+    display: block;
+    right: 0;
+    position: relative;
 }

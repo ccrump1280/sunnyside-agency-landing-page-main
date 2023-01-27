@@ -19,21 +19,30 @@
         border-radius: 30px;
         padding: 0px 15px;
     }
+    .contact-button:hover {
+        background-color: rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
+    }
     .desktop-flex {
         display: flex;
     }
-    .desktop-hide {
-        display: none;
+    .mobile {
+        display: none !important;
+    }
+    .navigation-menu {
+        width: 100%;
+        flex-direction: row;
+        color: white;
     }
     .desktop-reverse-order {
         flex-direction: row-reverse;
     }
     .gallery-text {
         min-width: 300px;
-        bottom: 40%;
+        bottom: 42%;
         transform: translateX(-50%) translateY(100%);
     }
-    .mobile-hide {
+    .desktop {
         display: block;
     }
 
